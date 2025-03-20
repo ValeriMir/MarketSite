@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Market</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>My Market</h1>
+    <!-- Sign Up and Login buttons -->
+    <button id="signupBtn" class="signup-button">Sign Up</button>
+    <button id="loginBtn" class="login-button">Login</button>
+    <!-- Cart Button -->
+    <button id="cartBtn" class="cart-button">
+      🛒
+      <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <div class="container">
+    <div id="welcomeMessage"></div>
+    <section class="products">
+      <!-- Sample Product 1 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/400x200.png?text=Product+1" alt="Product 1" />
+        <div class="product-info">
+          <h3>Product 1</h3>
+          <p>$29.99</p>
+          <button onclick="addToCart('Product 1')" class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Sample Product 2 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/400x200.png?text=Product+2" alt="Product 2" />
+        <div class="product-info">
+          <h3>Product 2</h3>
+          <p>$39.99</p>
+          <button onclick="addToCart('Product 2')" class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+      <!-- Sample Product 3 -->
+      <div class="product">
+        <img src="https://via.placeholder.com/400x200.png?text=Product+3" alt="Product 3" />
+        <div class="product-info">
+          <h3>Product 3</h3>
+          <p>$19.99</p>
+          <button onclick="addToCart('Product 3')" class="add-cart-btn">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close login-close">&times;</span>
+      <h2>User Login</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" required />
+        <label for="password">Password</label>
+        <input type="password" id="password" required />
+        <button type="submit">Login</button>
+      </form>
+      <p id="loginError" class="error-msg">Invalid credentials!</p>
+    </div>
+  </div>
+
+  <!-- Sign Up Modal -->
+  <div id="signupModal" class="modal">
+    <div class="modal-content">
+      <span class="close signup-close">&times;</span>
+      <h2>User Sign Up</h2>
+      <form id="signupForm">
+        <label for="newUsername">Username</label>
+        <input type="text" id="newUsername" required />
+        <label for="newPassword">Password</label>
+        <input type="password" id="newPassword" required />
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" required />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p id="signupError" class="error-msg">Passwords do not match!</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
